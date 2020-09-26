@@ -1,0 +1,38 @@
+{% extends "bootstrap_3_layout.html.twig" %}
+
+{%- block form_start -%}
+    {% set attr = attr|merge({novalidate: 'novalidate'}) %}
+    {{- parent() -}}
+{%- endblock form_start -%}
+
+{%- block form_label -%}
+    {{ parent() }}
+    {% if attr.title is defined %}
+        <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="{{ attr.title }}"></span>
+    {% endif %}
+{%- endblock form_label -%}
+
+{%- block button_widget -%}
+    {%- if label is empty -%}
+        {%- if label_format is not empty -%}
+            {% set label = label_format|replace({
+                '%name%': name,
+                '%id%': id,
+            }) %}
+        {%- else -%}
+            {% set label = name|humanize %}
+        {%- endif -%}
+    {%- endif -%}
+    {% set icon %}
+        {% if icon_class is defined and icon_class is not empty %}
+            <span class="glyphicon glyphicon-{{ icon_class }}"></span>
+        {% endif %}
+    {% endset %}
+    {% set attr = attr|merge({class: (attr.class|default('btn-default') ~ ' btn')|trim}) %}
+    <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ icon|raw }} {{ label|trans({}, translation_domain) }}</button>
+{%- endblock button_widget -%}
+
+{%- block collection_widget -%}
+    {% import '@ArturDoruchForm/FormCollection/renderer.html.twig' as renderer %}
+    {{ renderer.render(form) }}
+{%- endblock collection_widget -%}

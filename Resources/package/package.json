@@ -1,0 +1,14 @@
+{
+  "name": "@arturdoruch/form-bundle",
+  "description": "JavaScript support for Symfony form.",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@arturdoruch/event-registry": "^1.0"
+  },
+  "author": {
+    "name": "Artur Doruch",
+    "email": "arturdoruch@interia.pl"
+  },
+  "license": "MIT"
+}
