@@ -7,9 +7,9 @@ Manages items of the Symfony form with type of collection [https://symfony.com/d
 Import JS and CSS files in template rendering the form or globally in application main javascript file.
 
 ```js
-import '@arturdoruch/form-bundle/form-collection/styles.css';
+import '@arturdoruch/form-bundle/styles/form-collection.css';
 import '../../vendor/arturdoruch/css-styles/module.css'; // For styling add/remove collection item buttons.
-import formCollectionManager from '@arturdoruch/form-bundle/form-collection/form-collection-manager';
+import formCollectionManager from '@arturdoruch/form-bundle/lib/form-collection-manager';
 ```
 
 ### Class API

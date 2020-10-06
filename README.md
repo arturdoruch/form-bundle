@@ -67,4 +67,4 @@ If is not used the form theme from this bundle, for rendering form collection, s
     {%- endblock collection_widget -%}
     ``` 
     
-Read how to [manage the form collection items](Resources/package/form-collection/usage.md) with JavaScript.    
+Read how to [manage the form collection items](Resources/package/doc/form-collection-usage.md) with JavaScript.    
