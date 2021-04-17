@@ -1,7 +1,7 @@
 {
     "name": "arturdoruch/form-bundle",
     "type": "symfony-bundle",
-    "description": "Provides themes and JavaScript support for Symfony form.",
+    "description": "Provides modified Bootstrap 3 themes and JavaScript support for Symfony Form component.",
     "license": "MIT",
     "authors": [
         {

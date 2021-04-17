@@ -1,6 +1,6 @@
 # FormBundle
 
-Provides themes and JavaScript support for Symfony form.
+Provides modified Bootstrap 3 themes and JavaScript support for Symfony [Form](https://symfony.com/doc/current/components/form.html) component.
 
 <!--### Themes
 
@@ -21,7 +21,7 @@ Themes extends Symfony default themes and modifies several blocks.
 composer require arturdoruch/form-bundle
 ```
 
-Register bundle in `AppKernel` class.
+Register bundle in `Kernel` class.
 
 ```php
 public function registerBundles()
