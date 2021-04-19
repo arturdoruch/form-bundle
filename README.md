@@ -21,6 +21,21 @@ Themes extends Symfony default themes and modifies several blocks.
 composer require arturdoruch/form-bundle
 ```
 
+Add URLs to the repositories (not published on the https://packagist.org) in `composer.json` file of your application.
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:arturdoruch/form-bundle.git"
+    },
+    {
+        "type": "vcs",
+        "url": "git@github.com:arturdoruch/css-styles.git"
+    }
+]
+```
+
 Register bundle in `Kernel` class.
 
 ```php
