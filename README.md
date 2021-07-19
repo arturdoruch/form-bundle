@@ -17,42 +17,52 @@ Themes extends Symfony default themes and modifies several blocks.
 
 ## Installation
 
-```sh
-composer require arturdoruch/form-bundle
-```
+ 1. Add URLs to the repositories (not published on the https://packagist.org) in `composer.json` file of your application
 
-Add URLs to the repositories (not published on the https://packagist.org) in `composer.json` file of your application.
+    ```json
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:arturdoruch/form-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:arturdoruch/css-styles.git"
+        }
+    ]
+    ```
 
-```json
-"repositories": [
+ 2. Run the command
+    ```sh
+    composer require arturdoruch/form-bundle
+    ```
+
+ 3. Register bundle in `Kernel` class of your application
+
+    In Symfony 3
+    ```php
+    // app/AppKernel.php
+    public function registerBundles()
     {
-        "type": "vcs",
-        "url": "git@github.com:arturdoruch/form-bundle.git"
-    },
-    {
-        "type": "vcs",
-        "url": "git@github.com:arturdoruch/css-styles.git"
-    }
-]
-```
-
-Register bundle in `Kernel` class.
-
-```php
-public function registerBundles()
-{
-    $bundles = [
-        // Other bundles.
-        new ArturDoruch\FormBundle\ArturDoruchFormBundle(),
+        $bundles = [
+            // Other bundles
+            new ArturDoruch\FormBundle\ArturDoruchFormBundle(),
+        ];
+    ```
+    In Symfony >= 4
+    ```php
+    // config/bundles.php
+    return [
+        // Other bundles
+        ArturDoruch\FormBundle\ArturDoruchFormBundle::class => ['all' => true],
     ];
-}    
-```
+    ```
 
-Install NodeJs package with JavaScript support for the form field actions.
+ 4. Install NodeJs package with JavaScript support for the form field actions.
 
-```sh
-yarn add link:vendor/arturdoruch/form-bundle/Resources/package
-```
+    ```sh
+    yarn add link:vendor/arturdoruch/form-bundle/Resources/package
+    ```
 
 ## Usage
 
